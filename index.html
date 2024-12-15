@@ -39,11 +39,35 @@
                         </li>
                     </ul>
                     <form class="d-flex" role="search">
-                        <button class="btn btn-secondary fw-500" type="submit">Telusuri Product</button>
+                        <!-- Trigger button for Modal -->
+                        <button class="btn btn-secondary fw-500" type="button" data-bs-toggle="modal" data-bs-target="#searchModal">Telusuri Product</button>
                     </form>
                 </div>
             </div>
         </nav>
+    
+        <!-- Modal -->
+        <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="searchModalLabel">Cari Produk</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="searchForm">
+                            <div class="mb-1">
+                                <input type="text" class="form-control" id="productName" placeholder="Masukkan nama produk">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                        <button type="submit" class="btn btn-primary" form="searchForm">Cari</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- Jumbotron Section -->
         <section class="poppins py-4">
